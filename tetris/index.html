@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テトリス</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>テトリス</h1>
+        </div>
+        
+        <div class="game-content">
+            <div class="game-info">
+                <div class="score-section">
+                    <h2>スコア</h2>
+                    <div id="score">0</div>
+                </div>
+                <div class="level-section">
+                    <h2>レベル</h2>
+                    <div id="level">1</div>
+                </div>
+                <div class="lines-section">
+                    <h2>ライン</h2>
+                    <div id="lines">0</div>
+                </div>
+                <div class="next-section">
+                    <h2>ネクスト</h2>
+                    <canvas id="next-canvas" width="80" height="80"></canvas>
+                </div>
+            </div>
+            
+            <div class="game-board">
+                <canvas id="game-canvas" width="300" height="600"></canvas>
+                <div id="game-over" class="game-over hidden">
+                    <h2>ゲームオーバー</h2>
+                    <p>最終スコア: <span id="final-score">0</span></p>
+                    <button id="restart-btn">もう一度プレイ</button>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <h2>操作方法</h2>
+                <p>← → : 移動</p>
+                <p>↓ : 下降</p>
+                <p>↑ : 回転</p>
+                <p>スペース : 瞬間落下</p>
+                <p>P : ポーズ</p>
+                <button id="start-btn">ゲーム開始</button>
+                <button id="pause-btn" disabled>ポーズ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

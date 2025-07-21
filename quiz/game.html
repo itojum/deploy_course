@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>クイズゲーム</title>
+        <link rel="stylesheet" href="assets/css/index.css">
+        <link rel="stylesheet" href="assets/css/game.css">
+        <script src="assets/js/common.js"></script>
+        <script src="assets/js/questions.js"></script>
+        <script src="assets/js/game.js"></script>
+    </head>
+    <body>
+      <header>
+        <a href="index.html">
+          <img src="assets/img/chat-question.svg" alt="logo" id="logo">
+          <h1 id="title">クイズゲーム</h1>
+        </a>
+      </header>
+        <main>
+          <h2 id="question-title"></h2>
+          <p id="question-text">問題文</p>
+          <img src="" alt="問題画像" id="question-img">
+          <div id="answer-container">
+            <button class="secondary-button">1</button>
+            <button class="secondary-button">2</button>
+            <button class="secondary-button">3</button>
+            <button class="secondary-button">4</button>
+          </div>
+
+          <div id="result-container">
+            <button class="primary-button" onclick="onClickResultButton()">回答</button>
+
+            <div id="answer-result-container">
+              <h3>解説</h3>
+              <p id="explanation-text">解説文</p>
+
+              <button class="secondary-button"  onclick="showNextQuestion()">次の問題</button>
+            </div>
+          </div>
+        </main>
+    </body>
+</html>
